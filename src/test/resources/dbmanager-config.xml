@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasource-defines>
+	<datasource-define>  
+	    <name>myDataSource</name>
+	    <jndiname>myDataSource</jndiname>
+	    <db-to-server-encode-charset>UTF-8</db-to-server-encode-charset>
+	    <db-to-server-decode-charset>UTF-8</db-to-server-decode-charset>
+	    <need-convert-from-db-to-server>false</need-convert-from-db-to-server>
+	    
+	    <server-to-db-encode-charset>UTF-8</server-to-db-encode-charset>
+	    <server-to-db-decode-charset>UTF-8</server-to-db-decode-charset>
+	    <need-convert-from-server-to-db>true</need-convert-from-server-to-db>
+		<description>visa datasource define.if encode equals decode ,the need convert will auto set false </description>
+	</datasource-define>
+</datasource-defines>

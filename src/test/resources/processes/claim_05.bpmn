@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_threeCarItem" structureRef="String" />
+  <itemDefinition id="_woundItem" structureRef="String" />
+  <itemDefinition id="_propcItem" structureRef="String" />
+  <itemDefinition id="_nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_checkItem" structureRef="String" />
+
+  <itemDefinition id="_2-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_2-threeCarItem" structureRef="String" />
+  <itemDefinition id="_2-woundItem" structureRef="String" />
+  <itemDefinition id="_2-propcItem" structureRef="String" />
+  <itemDefinition id="_2-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_2-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_2-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_2-checkItem" structureRef="String" />
+
+  <itemDefinition id="_3-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_3-threeCarItem" structureRef="String" />
+  <itemDefinition id="_3-woundItem" structureRef="String" />
+  <itemDefinition id="_3-propcItem" structureRef="String" />
+  <itemDefinition id="_3-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_3-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_3-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_3-checkItem" structureRef="String" />
+
+  <itemDefinition id="_6-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_6-threeCarItem" structureRef="String" />
+  <itemDefinition id="_6-woundItem" structureRef="String" />
+  <itemDefinition id="_6-propcItem" structureRef="String" />
+  <itemDefinition id="_6-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_6-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_6-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_6-checkItem" structureRef="String" />
+
+  <itemDefinition id="_11-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_11-threeCarItem" structureRef="String" />
+  <itemDefinition id="_11-woundItem" structureRef="String" />
+  <itemDefinition id="_11-propcItem" structureRef="String" />
+  <itemDefinition id="_11-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_11-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_11-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_11-checkItem" structureRef="String" />
+
+  <itemDefinition id="_13-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_13-threeCarItem" structureRef="String" />
+  <itemDefinition id="_13-woundItem" structureRef="String" />
+  <itemDefinition id="_13-propcItem" structureRef="String" />
+  <itemDefinition id="_13-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_13-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-checkItem" structureRef="String" />
+
+  <itemDefinition id="_16-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_16-threeCarItem" structureRef="String" />
+  <itemDefinition id="_16-woundItem" structureRef="String" />
+  <itemDefinition id="_16-propcItem" structureRef="String" />
+  <itemDefinition id="_16-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_16-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_16-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_16-checkItem" structureRef="String" />
+
+  <itemDefinition id="_19-2-1-nodeThreeItem" />
+
+  <itemDefinition id="_19-2-2-nodeThreeItem" />
+
+  <itemDefinition id="_21-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_21-threeCarItem" structureRef="String" />
+  <itemDefinition id="_21-woundItem" structureRef="String" />
+  <itemDefinition id="_21-propcItem" structureRef="String" />
+  <itemDefinition id="_21-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_21-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_21-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_21-checkItem" structureRef="String" />
+
+  <itemDefinition id="_20-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_20-threeCarItem" structureRef="String" />
+  <itemDefinition id="_20-woundItem" structureRef="String" />
+  <itemDefinition id="_20-propcItem" structureRef="String" />
+  <itemDefinition id="_20-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_20-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_20-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_20-checkItem" structureRef="String" />
+
+  <itemDefinition id="_23-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_23-threeCarItem" structureRef="String" />
+  <itemDefinition id="_23-woundItem" structureRef="String" />
+  <itemDefinition id="_23-propcItem" structureRef="String" />
+  <itemDefinition id="_23-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_23-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_23-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_23-checkItem" structureRef="String" />
+
+  <itemDefinition id="_27-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_27-threeCarItem" structureRef="String" />
+  <itemDefinition id="_27-woundItem" structureRef="String" />
+  <itemDefinition id="_27-propcItem" structureRef="String" />
+  <itemDefinition id="_27-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_27-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_27-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_27-checkItem" structureRef="String" />
+
+  <itemDefinition id="_26-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_26-threeCarItem" structureRef="String" />
+  <itemDefinition id="_26-woundItem" structureRef="String" />
+  <itemDefinition id="_26-propcItem" structureRef="String" />
+  <itemDefinition id="_26-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_26-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_26-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_26-checkItem" structureRef="String" />
+
+  <itemDefinition id="_29-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_29-threeCarItem" structureRef="String" />
+  <itemDefinition id="_29-woundItem" structureRef="String" />
+  <itemDefinition id="_29-propcItem" structureRef="String" />
+  <itemDefinition id="_29-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_29-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_29-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_29-checkItem" structureRef="String" />
+
+  <itemDefinition id="_36-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_36-threeCarItem" structureRef="String" />
+  <itemDefinition id="_36-woundItem" structureRef="String" />
+  <itemDefinition id="_36-propcItem" structureRef="String" />
+  <itemDefinition id="_36-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_36-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-checkItem" structureRef="String" />
+
+  <itemDefinition id="_37-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_37-threeCarItem" structureRef="String" />
+  <itemDefinition id="_37-woundItem" structureRef="String" />
+  <itemDefinition id="_37-propcItem" structureRef="String" />
+  <itemDefinition id="_37-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_37-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_37-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_37-checkItem" structureRef="String" />
+
+  <itemDefinition id="_58-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_58-threeCarItem" structureRef="String" />
+  <itemDefinition id="_58-woundItem" structureRef="String" />
+  <itemDefinition id="_58-propcItem" structureRef="String" />
+  <itemDefinition id="_58-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_58-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_58-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_58-checkItem" structureRef="String" />
+
+  <itemDefinition id="_57-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_57-threeCarItem" structureRef="String" />
+  <itemDefinition id="_57-woundItem" structureRef="String" />
+  <itemDefinition id="_57-propcItem" structureRef="String" />
+  <itemDefinition id="_57-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_57-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_57-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_57-checkItem" structureRef="String" />
+
+  <itemDefinition id="_60-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_60-threeCarItem" structureRef="String" />
+  <itemDefinition id="_60-woundItem" structureRef="String" />
+  <itemDefinition id="_60-propcItem" structureRef="String" />
+  <itemDefinition id="_60-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_60-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_60-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_60-checkItem" structureRef="String" />
+
+  <itemDefinition id="_77-relatedClaimItem" structureRef="String" />
+  <itemDefinition id="_77-threeCarItem" structureRef="String" />
+  <itemDefinition id="_77-woundItem" structureRef="String" />
+  <itemDefinition id="_77-propcItem" structureRef="String" />
+  <itemDefinition id="_77-nodeTypeItem" structureRef="String" />
+  <itemDefinition id="_77-nodeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-nodeListThreeItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-checkItem" structureRef="String" />
+
+  <itemDefinition id="_19_multiInstanceItemType" />
+
+  <process processType="Private" isExecutable="true" id="claim_05" name="claim_05" tns:packageName="claimPackage" >
+
+    <!-- process variables -->
+    <property id="relatedClaim" itemSubjectRef="_relatedClaimItem"/>
+    <property id="threeCar" itemSubjectRef="_threeCarItem"/>
+    <property id="wound" itemSubjectRef="_woundItem"/>
+    <property id="propc" itemSubjectRef="_propcItem"/>
+    <property id="nodeType" itemSubjectRef="_nodeTypeItem"/>
+    <property id="nodeList" itemSubjectRef="_nodeListItem"/>
+    <property id="nodeListThree" itemSubjectRef="_nodeListThreeItem"/>
+    <property id="check" itemSubjectRef="_checkItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <userTask id="_2" name="报案" >
+      <ioSpecification>
+        <dataInput id="_2_aaaInput" name="aaa" />
+        <dataInput id="_2_CommentInput" name="Comment" />
+        <dataInput id="_2_ContentInput" name="Content" />
+        <dataInput id="_2_TaskNameInput" name="TaskName" />
+        <inputSet>
+          <dataInputRefs>_2_aaaInput</dataInputRefs>
+          <dataInputRefs>_2_CommentInput</dataInputRefs>
+          <dataInputRefs>_2_ContentInput</dataInputRefs>
+          <dataInputRefs>_2_TaskNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>nodeType</sourceRef>
+        <targetRef>_2_aaaInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_CommentInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">aaaaa=bbbbb, bbb=ccc,    ddd=中国    </from>
+          <to xsi:type="tFormalExpression">_2_CommentInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ContentInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">aaaa=bbbb</from>
+          <to xsi:type="tFormalExpression">_2_ContentInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">报案</from>
+          <to xsi:type="tFormalExpression">_2_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>regis</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_3" name="调度" >
+      <ioSpecification>
+        <dataInput id="_3_TaskNameInput" name="TaskName" />
+        <dataOutput id="_3_checkOutput" name="check" />
+        <dataOutput id="_3_threeCarOutput" name="threeCar" />
+        <dataOutput id="_3_nodeTypeOutput" name="nodeType" />
+        <dataOutput id="_3_woundOutput" name="wound" />
+        <dataOutput id="_3_propcOutput" name="propc" />
+        <inputSet>
+          <dataInputRefs>_3_TaskNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_3_checkOutput</dataOutputRefs>
+          <dataOutputRefs>_3_threeCarOutput</dataOutputRefs>
+          <dataOutputRefs>_3_nodeTypeOutput</dataOutputRefs>
+          <dataOutputRefs>_3_woundOutput</dataOutputRefs>
+          <dataOutputRefs>_3_propcOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_3_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">调度</from>
+          <to xsi:type="tFormalExpression">_3_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_checkOutput</sourceRef>
+        <targetRef>check</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_threeCarOutput</sourceRef>
+        <targetRef>threeCar</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_nodeTypeOutput</sourceRef>
+        <targetRef>nodeType</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_woundOutput</sourceRef>
+        <targetRef>wound</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_propcOutput</sourceRef>
+        <targetRef>propc</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>sched</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <parallelGateway id="_5" name="Gateway" gatewayDirection="Diverging" />
+    <userTask id="_6" name="立案" >
+      <ioSpecification>
+        <dataInput id="_6_TaskNameInput" name="TaskName" />
+        <dataOutput id="_6_nodeTypeOutput" name="nodeType" />
+        <inputSet>
+          <dataInputRefs>_6_TaskNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_6_nodeTypeOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_6_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">立案</from>
+          <to xsi:type="tFormalExpression">_6_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_6_nodeTypeOutput</sourceRef>
+        <targetRef>nodeType</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>claim</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <endEvent id="_7" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <inclusiveGateway id="_9" name="Gateway" gatewayDirection="Diverging" />
+    <userTask id="_11" name="查勘" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>check</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_13" name="定损" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>certa</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_16" name="报案注销" >
+      <ioSpecification>
+        <dataInput id="_16_TaskNameInput" name="TaskName" />
+        <dataOutput id="_16_nodeTypeOutput" name="nodeType" />
+        <inputSet>
+          <dataInputRefs>_16_TaskNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_16_nodeTypeOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_16_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">报案注销</from>
+          <to xsi:type="tFormalExpression">_16_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_16_nodeTypeOutput</sourceRef>
+        <targetRef>nodeType</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>regist_cancel</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <subProcess id="_19" name="三者车的定损核损处理"  >
+      <ioSpecification>
+        <dataInput id="_19_input" name="MultiInstanceInput" />
+        <inputSet/>
+        <outputSet/>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>nodeListThree</sourceRef>
+        <targetRef>_19_input</targetRef>
+      </dataInputAssociation>
+      <multiInstanceLoopCharacteristics>
+        <loopDataInputRef>_19_input</loopDataInputRef>
+        <inputDataItem id="nodeThree" itemSubjectRef="_19_multiInstanceItemType"/>
+      </multiInstanceLoopCharacteristics>
+    <!-- nodes -->
+    <userTask id="_19-2-1" name="三者车定损" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>certa_three</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_19-2-2" name="三者车核损" >
+      <ioSpecification>
+        <dataOutput id="_19-2-2_nodeTypeOutput" name="nodeType" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_19-2-2_nodeTypeOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_19-2-2_nodeTypeOutput</sourceRef>
+        <targetRef>nodeType</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>verif_three</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <startEvent id="_19-2-3" name="Start" />
+    <endEvent id="_19-2-4" name="End" />
+    <exclusiveGateway id="_19-2-5" name="Gateway" gatewayDirection="Converging" />
+    <inclusiveGateway id="_19-2-6" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_19-2-7" name="Gateway" gatewayDirection="Converging" />
+    <!-- connections -->
+    <sequenceFlow id="_19-2-5-_19-2-1" sourceRef="_19-2-5" targetRef="_19-2-1" />
+    <sequenceFlow id="_19-2-7-_19-2-2" sourceRef="_19-2-7" targetRef="_19-2-2" />
+    <sequenceFlow id="_19-2-6-_19-2-4" sourceRef="_19-2-6" targetRef="_19-2-4" name="核损通过" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "certi".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_19-2-3-_19-2-5" sourceRef="_19-2-3" targetRef="_19-2-5" />
+    <sequenceFlow id="_19-2-6-_19-2-5" sourceRef="_19-2-6" targetRef="_19-2-5" name="核损退回" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "certa".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_19-2-2-_19-2-6" sourceRef="_19-2-2" targetRef="_19-2-6" />
+    <sequenceFlow id="_19-2-1-_19-2-7" sourceRef="_19-2-1" targetRef="_19-2-7" />
+    <sequenceFlow id="_19-2-6-_19-2-7" sourceRef="_19-2-6" targetRef="_19-2-7" name="核损收回" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "certi".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    </subProcess>
+    <endEvent id="_18" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <userTask id="_21" name="人伤定损" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>wound</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_20" name="核损" >
+      <ioSpecification>
+        <dataOutput id="_20_nodeTypeOutput" name="nodeType" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_20_nodeTypeOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_20_nodeTypeOutput</sourceRef>
+        <targetRef>nodeType</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>verif</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_23" name="财产定损" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>propc</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_27" name="理算" >
+      <ioSpecification>
+        <dataOutput id="_27_threeCarOutput" name="threeCar" />
+        <dataOutput id="_27_nodeTypeOutput" name="nodeType" />
+        <dataOutput id="_27_woundOutput" name="wound" />
+        <dataOutput id="_27_propcOutput" name="propc" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_27_threeCarOutput</dataOutputRefs>
+          <dataOutputRefs>_27_nodeTypeOutput</dataOutputRefs>
+          <dataOutputRefs>_27_woundOutput</dataOutputRefs>
+          <dataOutputRefs>_27_propcOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_27_threeCarOutput</sourceRef>
+        <targetRef>threeCar</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_27_nodeTypeOutput</sourceRef>
+        <targetRef>nodeType</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_27_woundOutput</sourceRef>
+        <targetRef>wound</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_27_propcOutput</sourceRef>
+        <targetRef>propc</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>compe</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_26" name="单证" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>certi</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_29" name="核赔" >
+      <ioSpecification>
+        <dataOutput id="_29_nodeTypeOutput" name="nodeType" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_29_nodeTypeOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_29_nodeTypeOutput</sourceRef>
+        <targetRef>nodeType</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>veric</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <exclusiveGateway id="_32" name="Gateway" gatewayDirection="Converging" />
+    <userTask id="_36" name="注销拒赔" >
+      <ioSpecification>
+        <dataOutput id="_36_nodeTypeOutput" name="nodeType" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_36_nodeTypeOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_36_nodeTypeOutput</sourceRef>
+        <targetRef>nodeType</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>cance</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_37" name="特殊赔案" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>speci</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <endEvent id="_40" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <exclusiveGateway id="_44" name="Gateway" gatewayDirection="Converging" />
+    <parallelGateway id="_50" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_59" name="Gateway" gatewayDirection="Converging" />
+    <userTask id="_58" name="核赔" >
+      <ioSpecification>
+        <dataOutput id="_58_nodeTypeOutput" name="nodeType" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_58_nodeTypeOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_58_nodeTypeOutput</sourceRef>
+        <targetRef>nodeType</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>speci_veric</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_57" name="申请特殊赔案" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>request_speci</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <parallelGateway id="_63" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_61" name="Gateway" gatewayDirection="Converging" />
+    <userTask id="_60" name="申请注销拒赔" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>request_cancel</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <exclusiveGateway id="_68" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_69" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_70" name="Gateway" gatewayDirection="Converging" />
+    <exclusiveGateway id="_76" name="Gateway" gatewayDirection="Converging" />
+    <userTask id="_77" name="结案" >
+      <ioSpecification>
+        <dataOutput id="_77_nodeTypeOutput" name="nodeType" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_77_nodeTypeOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_77_nodeTypeOutput</sourceRef>
+        <targetRef>nodeType</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>endca</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <endEvent id="_72" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <inclusiveGateway id="_73" name="Gateway" gatewayDirection="Diverging" />
+    <inclusiveGateway id="_74" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_75" name="Gateway" gatewayDirection="Converging" />
+    <exclusiveGateway id="_85" name="Gateway" gatewayDirection="Converging" />
+    <exclusiveGateway id="_84" name="Gateway" gatewayDirection="Converging" />
+    <inclusiveGateway id="_87" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_86" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_81" name="Gateway" gatewayDirection="Converging" />
+    <exclusiveGateway id="_83" name="Gateway" gatewayDirection="Converging" />
+    <exclusiveGateway id="_82" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_93" name="Gateway" gatewayDirection="Converging" />
+    <parallelGateway id="_92" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_95" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_89" name="Gateway" gatewayDirection="Converging" />
+    <exclusiveGateway id="_88" name="Gateway" gatewayDirection="Converging" />
+    <exclusiveGateway id="_91" name="Gateway" gatewayDirection="Converging" />
+    <parallelGateway id="_90" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_98" name="Gateway" gatewayDirection="Diverging" />
+    <parallelGateway id="_96" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_97" name="Gateway" gatewayDirection="Converging" />
+
+    <!-- connections -->
+    <sequenceFlow id="_83-_2" sourceRef="_83" targetRef="_2" />
+    <sequenceFlow id="_76-_3" sourceRef="_76" targetRef="_3" />
+    <sequenceFlow id="_2-_5" sourceRef="_2" targetRef="_5" />
+    <sequenceFlow id="_97-_6" sourceRef="_97" targetRef="_6" />
+    <sequenceFlow id="_82-_7" sourceRef="_82" targetRef="_7" name="结束" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "end".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_88-_9" sourceRef="_88" targetRef="_9" />
+    <sequenceFlow id="_87-_11" sourceRef="_87" targetRef="_11" name="查勘" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "true".equals(check);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_75-_13" sourceRef="_75" targetRef="_13" />
+    <sequenceFlow id="_93-_16" sourceRef="_93" targetRef="_16" />
+    <sequenceFlow id="_9-_19" sourceRef="_9" targetRef="_19" name="三者车定损核损" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "true".equals(threeCar);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_95-_18" sourceRef="_95" targetRef="_18" name="流程结束" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "end".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_89-_21" sourceRef="_89" targetRef="_21" />
+    <sequenceFlow id="_84-_20" sourceRef="_84" targetRef="_20" />
+    <sequenceFlow id="_91-_23" sourceRef="_91" targetRef="_23" />
+    <sequenceFlow id="_32-_27" sourceRef="_32" targetRef="_27" />
+    <sequenceFlow id="_85-_26" sourceRef="_85" targetRef="_26" />
+    <sequenceFlow id="_86-_29" sourceRef="_86" targetRef="_29" name="核赔" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "veric".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_50-_32" sourceRef="_50" targetRef="_32" />
+    <sequenceFlow id="_73-_32" sourceRef="_73" targetRef="_32" name="核赔通过" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "compe".equals(nodeType)||"endca".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_96-_36" sourceRef="_96" targetRef="_36" />
+    <sequenceFlow id="_70-_37" sourceRef="_70" targetRef="_37" />
+    <sequenceFlow id="_68-_40" sourceRef="_68" targetRef="_40" name="申请成功" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "end".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_90-_44" sourceRef="_90" targetRef="_44" />
+    <sequenceFlow id="_92-_44" sourceRef="_92" targetRef="_44" />
+    <sequenceFlow id="_74-_44" sourceRef="_74" targetRef="_44" name="核损通过" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "certi".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_19-_44" sourceRef="_19" targetRef="_44" />
+    <sequenceFlow id="_11-_44" sourceRef="_11" targetRef="_44" />
+    <sequenceFlow id="_98-_44" sourceRef="_98" targetRef="_44" name="单证节点" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !"claim".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_26-_50" sourceRef="_26" targetRef="_50" />
+    <sequenceFlow id="_63-_59" sourceRef="_63" targetRef="_59" />
+    <sequenceFlow id="_69-_59" sourceRef="_69" targetRef="_59" name="审核通过" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "end".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_37-_58" sourceRef="_37" targetRef="_58" />
+    <sequenceFlow id="_59-_57" sourceRef="_59" targetRef="_57" />
+    <sequenceFlow id="_44-_63" sourceRef="_44" targetRef="_63" />
+    <sequenceFlow id="_68-_61" sourceRef="_68" targetRef="_61" name="注销拒赔退回" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !"end".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_96-_61" sourceRef="_96" targetRef="_61" />
+    <sequenceFlow id="_5-_61" sourceRef="_5" targetRef="_61" />
+    <sequenceFlow id="_61-_60" sourceRef="_61" targetRef="_60" />
+    <sequenceFlow id="_36-_68" sourceRef="_36" targetRef="_68" />
+    <sequenceFlow id="_58-_69" sourceRef="_58" targetRef="_69" />
+    <sequenceFlow id="_69-_70" sourceRef="_69" targetRef="_70" name="核赔退回" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "speci".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_57-_70" sourceRef="_57" targetRef="_70" />
+    <sequenceFlow id="_5-_76" sourceRef="_5" targetRef="_76" />
+    <sequenceFlow id="_87-_76" sourceRef="_87" targetRef="_76" name="调度改派" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_81-_77" sourceRef="_81" targetRef="_77" />
+    <sequenceFlow id="_73-_72" sourceRef="_73" targetRef="_72" name="自动立案" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "end".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_29-_73" sourceRef="_29" targetRef="_73" />
+    <sequenceFlow id="_20-_74" sourceRef="_20" targetRef="_74" />
+    <sequenceFlow id="_9-_75" sourceRef="_9" targetRef="_75" name="定损" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "certa".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_74-_75" sourceRef="_74" targetRef="_75" name="核损退回" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "certa".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_63-_85" sourceRef="_63" targetRef="_85" />
+    <sequenceFlow id="_50-_85" sourceRef="_50" targetRef="_85" />
+    <sequenceFlow id="_86-_85" sourceRef="_86" targetRef="_85" name="单证" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "certi".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_74-_84" sourceRef="_74" targetRef="_84" name="核损收回" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "certi".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_13-_84" sourceRef="_13" targetRef="_84" />
+    <sequenceFlow id="_3-_87" sourceRef="_3" targetRef="_87" />
+    <sequenceFlow id="_27-_86" sourceRef="_27" targetRef="_86" />
+    <sequenceFlow id="_73-_81" sourceRef="_73" targetRef="_81" name="结案" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "endca".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_82-_81" sourceRef="_82" targetRef="_81" name="关联结案" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "endca".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_1-_83" sourceRef="_1" targetRef="_83" />
+    <sequenceFlow id="_5-_83" sourceRef="_5" targetRef="_83" />
+    <sequenceFlow id="_77-_82" sourceRef="_77" targetRef="_82" />
+    <sequenceFlow id="_5-_93" sourceRef="_5" targetRef="_93" />
+    <sequenceFlow id="_95-_93" sourceRef="_95" targetRef="_93" name="部分注销" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !"end".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_23-_92" sourceRef="_23" targetRef="_92" />
+    <sequenceFlow id="_16-_95" sourceRef="_16" targetRef="_95" />
+    <sequenceFlow id="_90-_89" sourceRef="_90" targetRef="_89" />
+    <sequenceFlow id="_9-_89" sourceRef="_9" targetRef="_89" name="人伤定损" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "true".equals(wound);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_87-_88" sourceRef="_87" targetRef="_88" name="定损" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "certa".equals(nodeType)||"true".equals(wound)||"true".equals(propc)||"true".equals(threeCar);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_86-_88" sourceRef="_86" targetRef="_88" name="定损" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "certa".equals(nodeType)||"true".equals(wound)||"true".equals(propc)||"true".equals(threeCar);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_92-_91" sourceRef="_92" targetRef="_91" />
+    <sequenceFlow id="_9-_91" sourceRef="_9" targetRef="_91" name="财产定损" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "true".equals(propc);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_21-_90" sourceRef="_21" targetRef="_90" />
+    <sequenceFlow id="_6-_98" sourceRef="_6" targetRef="_98" />
+    <sequenceFlow id="_60-_96" sourceRef="_60" targetRef="_96" />
+    <sequenceFlow id="_5-_97" sourceRef="_5" targetRef="_97" />
+    <sequenceFlow id="_98-_97" sourceRef="_98" targetRef="_97" name="立案节点" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "claim".equals(nodeType);</conditionExpression>
+    </sequenceFlow>
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="claim_05" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="5" y="12" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="225" y="16" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="359" y="175" width="100" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="465" y="44" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="740" y="162" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="729" y="1204" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9" >
+        <dc:Bounds x="434" y="281" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_11" >
+        <dc:Bounds x="8" y="581" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13" >
+        <dc:Bounds x="275" y="435" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="788" y="90" width="100" height="56" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19" >
+        <dc:Bounds x="743" y="328" width="503" height="178" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19-2-1" >
+        <dc:Bounds x="835" y="434" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19-2-2" >
+        <dc:Bounds x="1071" y="440" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19-2-3" >
+        <dc:Bounds x="776" y="350" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19-2-4" >
+        <dc:Bounds x="1178" y="350" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19-2-5" >
+        <dc:Bounds x="901" y="353" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19-2-6" >
+        <dc:Bounds x="1075" y="352" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19-2-7" >
+        <dc:Bounds x="985" y="428" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_18" >
+        <dc:Bounds x="1047" y="35" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_21" >
+        <dc:Bounds x="440" y="427" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_20" >
+        <dc:Bounds x="72" y="466" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_23" >
+        <dc:Bounds x="637" y="419" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_27" >
+        <dc:Bounds x="156" y="938" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_26" >
+        <dc:Bounds x="198" y="824" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_29" >
+        <dc:Bounds x="7" y="1101" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_32" >
+        <dc:Bounds x="318" y="908" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_36" >
+        <dc:Bounds x="1061" y="610" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_37" >
+        <dc:Bounds x="861" y="1001" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_40" >
+        <dc:Bounds x="1108" y="775" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_44" >
+        <dc:Bounds x="341" y="624" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_50" >
+        <dc:Bounds x="430" y="805" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_59" >
+        <dc:Bounds x="586" y="854" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_58" >
+        <dc:Bounds x="846" y="851" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_57" >
+        <dc:Bounds x="563" y="1002" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_63" >
+        <dc:Bounds x="447" y="701" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_61" >
+        <dc:Bounds x="682" y="573" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_60" >
+        <dc:Bounds x="860" y="548" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_68" >
+        <dc:Bounds x="851" y="775" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_69" >
+        <dc:Bounds x="735" y="852" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_70" >
+        <dc:Bounds x="741" y="997" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_76" >
+        <dc:Bounds x="167" y="138" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_77" >
+        <dc:Bounds x="129" y="1208" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_72" >
+        <dc:Bounds x="471" y="999" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_73" >
+        <dc:Bounds x="234" y="1087" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_74" >
+        <dc:Bounds x="142" y="342" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_75" >
+        <dc:Bounds x="327" y="330" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_85" >
+        <dc:Bounds x="223" y="688" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_84" >
+        <dc:Bounds x="211" y="546" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_87" >
+        <dc:Bounds x="42" y="227" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_86" >
+        <dc:Bounds x="5" y="966" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_81" >
+        <dc:Bounds x="352" y="1117" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_83" >
+        <dc:Bounds x="97" y="70" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_82" >
+        <dc:Bounds x="488" y="1205" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_93" >
+        <dc:Bounds x="676" y="20" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_92" >
+        <dc:Bounds x="556" y="462" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_95" >
+        <dc:Bounds x="898" y="23" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_89" >
+        <dc:Bounds x="408" y="363" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_88" >
+        <dc:Bounds x="231" y="262" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_91" >
+        <dc:Bounds x="545" y="374" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_90" >
+        <dc:Bounds x="381" y="482" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_98" >
+        <dc:Bounds x="662" y="245" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_96" >
+        <dc:Bounds x="877" y="657" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_97" >
+        <dc:Bounds x="579" y="144" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_19-2-5-_19-2-1" >
+        <di:waypoint x="182" y="49" />
+        <di:waypoint x="142" y="130" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-2-7-_19-2-2" >
+        <di:waypoint x="266" y="124" />
+        <di:waypoint x="378" y="136" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-2-6-_19-2-4" >
+        <di:waypoint x="356" y="48" />
+        <di:waypoint x="459" y="46" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-2-3-_19-2-5" >
+        <di:waypoint x="57" y="46" />
+        <di:waypoint x="182" y="49" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-2-6-_19-2-5" >
+        <di:waypoint x="356" y="48" />
+        <di:waypoint x="182" y="49" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-2-2-_19-2-6" >
+        <di:waypoint x="378" y="136" />
+        <di:waypoint x="356" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-2-1-_19-2-7" >
+        <di:waypoint x="142" y="130" />
+        <di:waypoint x="266" y="124" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-2-6-_19-2-7" >
+        <di:waypoint x="356" y="48" />
+        <di:waypoint x="266" y="124" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_83-_2" >
+        <di:waypoint x="121" y="94" />
+        <di:waypoint x="275" y="40" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_76-_3" >
+        <di:waypoint x="191" y="162" />
+        <di:waypoint x="409" y="199" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_5" >
+        <di:waypoint x="275" y="40" />
+        <di:waypoint x="489" y="68" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_97-_6" >
+        <di:waypoint x="603" y="168" />
+        <di:waypoint x="790" y="186" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_82-_7" >
+        <di:waypoint x="512" y="1229" />
+        <di:waypoint x="753" y="1228" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_88-_9" >
+        <di:waypoint x="255" y="286" />
+        <di:waypoint x="458" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_87-_11" >
+        <di:waypoint x="66" y="251" />
+        <di:waypoint x="58" y="605" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_75-_13" >
+        <di:waypoint x="351" y="354" />
+        <di:waypoint x="325" y="459" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_93-_16" >
+        <di:waypoint x="700" y="44" />
+        <di:waypoint x="838" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9-_19" >
+        <di:waypoint x="458" y="305" />
+        <di:waypoint x="994" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_95-_18" >
+        <di:waypoint x="922" y="47" />
+        <di:waypoint x="1071" y="59" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_89-_21" >
+        <di:waypoint x="432" y="387" />
+        <di:waypoint x="490" y="451" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_84-_20" >
+        <di:waypoint x="235" y="570" />
+        <di:waypoint x="122" y="490" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_91-_23" >
+        <di:waypoint x="569" y="398" />
+        <di:waypoint x="687" y="443" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_32-_27" >
+        <di:waypoint x="342" y="932" />
+        <di:waypoint x="206" y="962" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_85-_26" >
+        <di:waypoint x="247" y="712" />
+        <di:waypoint x="248" y="848" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_86-_29" >
+        <di:waypoint x="29" y="990" />
+        <di:waypoint x="57" y="1125" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_50-_32" >
+        <di:waypoint x="454" y="829" />
+        <di:waypoint x="342" y="932" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_73-_32" >
+        <di:waypoint x="258" y="1111" />
+        <di:waypoint x="342" y="932" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_96-_36" >
+        <di:waypoint x="901" y="681" />
+        <di:waypoint x="1111" y="634" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_70-_37" >
+        <di:waypoint x="765" y="1021" />
+        <di:waypoint x="911" y="1025" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_68-_40" >
+        <di:waypoint x="875" y="799" />
+        <di:waypoint x="1132" y="799" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_90-_44" >
+        <di:waypoint x="405" y="506" />
+        <di:waypoint x="365" y="648" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_92-_44" >
+        <di:waypoint x="580" y="486" />
+        <di:waypoint x="365" y="648" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_74-_44" >
+        <di:waypoint x="166" y="366" />
+        <di:waypoint x="365" y="648" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-_44" >
+        <di:waypoint x="994" y="417" />
+        <di:waypoint x="365" y="648" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_11-_44" >
+        <di:waypoint x="58" y="605" />
+        <di:waypoint x="365" y="648" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_98-_44" >
+        <di:waypoint x="686" y="269" />
+        <di:waypoint x="365" y="648" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_26-_50" >
+        <di:waypoint x="248" y="848" />
+        <di:waypoint x="454" y="829" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_63-_59" >
+        <di:waypoint x="471" y="725" />
+        <di:waypoint x="610" y="878" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_69-_59" >
+        <di:waypoint x="759" y="876" />
+        <di:waypoint x="610" y="878" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_37-_58" >
+        <di:waypoint x="911" y="1025" />
+        <di:waypoint x="896" y="875" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_59-_57" >
+        <di:waypoint x="610" y="878" />
+        <di:waypoint x="613" y="1026" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_44-_63" >
+        <di:waypoint x="365" y="648" />
+        <di:waypoint x="471" y="725" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_68-_61" >
+        <di:waypoint x="875" y="799" />
+        <di:waypoint x="706" y="597" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_96-_61" >
+        <di:waypoint x="901" y="681" />
+        <di:waypoint x="706" y="597" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_61" >
+        <di:waypoint x="489" y="68" />
+        <di:waypoint x="706" y="597" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_61-_60" >
+        <di:waypoint x="706" y="597" />
+        <di:waypoint x="910" y="572" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_36-_68" >
+        <di:waypoint x="1111" y="634" />
+        <di:waypoint x="875" y="799" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_58-_69" >
+        <di:waypoint x="896" y="875" />
+        <di:waypoint x="759" y="876" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_69-_70" >
+        <di:waypoint x="759" y="876" />
+        <di:waypoint x="765" y="1021" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_57-_70" >
+        <di:waypoint x="613" y="1026" />
+        <di:waypoint x="765" y="1021" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_76" >
+        <di:waypoint x="489" y="68" />
+        <di:waypoint x="191" y="162" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_87-_76" >
+        <di:waypoint x="66" y="251" />
+        <di:waypoint x="191" y="162" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_81-_77" >
+        <di:waypoint x="376" y="1141" />
+        <di:waypoint x="179" y="1232" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_73-_72" >
+        <di:waypoint x="258" y="1111" />
+        <di:waypoint x="495" y="1023" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_29-_73" >
+        <di:waypoint x="57" y="1125" />
+        <di:waypoint x="258" y="1111" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_20-_74" >
+        <di:waypoint x="122" y="490" />
+        <di:waypoint x="166" y="366" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9-_75" >
+        <di:waypoint x="458" y="305" />
+        <di:waypoint x="351" y="354" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_74-_75" >
+        <di:waypoint x="166" y="366" />
+        <di:waypoint x="351" y="354" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_63-_85" >
+        <di:waypoint x="471" y="725" />
+        <di:waypoint x="247" y="712" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_50-_85" >
+        <di:waypoint x="454" y="829" />
+        <di:waypoint x="247" y="712" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_86-_85" >
+        <di:waypoint x="29" y="990" />
+        <di:waypoint x="247" y="712" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_74-_84" >
+        <di:waypoint x="166" y="366" />
+        <di:waypoint x="235" y="570" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_84" >
+        <di:waypoint x="325" y="459" />
+        <di:waypoint x="235" y="570" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_87" >
+        <di:waypoint x="409" y="199" />
+        <di:waypoint x="66" y="251" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_27-_86" >
+        <di:waypoint x="206" y="962" />
+        <di:waypoint x="29" y="990" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_73-_81" >
+        <di:waypoint x="258" y="1111" />
+        <di:waypoint x="376" y="1141" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_82-_81" >
+        <di:waypoint x="512" y="1229" />
+        <di:waypoint x="376" y="1141" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_83" >
+        <di:waypoint x="29" y="36" />
+        <di:waypoint x="121" y="94" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_83" >
+        <di:waypoint x="489" y="68" />
+        <di:waypoint x="121" y="94" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_77-_82" >
+        <di:waypoint x="179" y="1232" />
+        <di:waypoint x="512" y="1229" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_93" >
+        <di:waypoint x="489" y="68" />
+        <di:waypoint x="700" y="44" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_95-_93" >
+        <di:waypoint x="922" y="47" />
+        <di:waypoint x="700" y="44" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_23-_92" >
+        <di:waypoint x="687" y="443" />
+        <di:waypoint x="580" y="486" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_16-_95" >
+        <di:waypoint x="838" y="118" />
+        <di:waypoint x="922" y="47" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_90-_89" >
+        <di:waypoint x="405" y="506" />
+        <di:waypoint x="432" y="387" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9-_89" >
+        <di:waypoint x="458" y="305" />
+        <di:waypoint x="432" y="387" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_87-_88" >
+        <di:waypoint x="66" y="251" />
+        <di:waypoint x="255" y="286" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_86-_88" >
+        <di:waypoint x="29" y="990" />
+        <di:waypoint x="255" y="286" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_92-_91" >
+        <di:waypoint x="580" y="486" />
+        <di:waypoint x="569" y="398" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9-_91" >
+        <di:waypoint x="458" y="305" />
+        <di:waypoint x="569" y="398" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_21-_90" >
+        <di:waypoint x="490" y="451" />
+        <di:waypoint x="405" y="506" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_98" >
+        <di:waypoint x="790" y="186" />
+        <di:waypoint x="686" y="269" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_60-_96" >
+        <di:waypoint x="910" y="572" />
+        <di:waypoint x="901" y="681" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_97" >
+        <di:waypoint x="489" y="68" />
+        <di:waypoint x="603" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_98-_97" >
+        <di:waypoint x="686" y="269" />
+        <di:waypoint x="603" y="168" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:drools="http://drools.org/schema/drools-spring"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://drools.org/schema/drools-spring 
+	http://drools.org/schema/drools-spring.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd"
+	default-autowire="byName" default-lazy-init="false">
+
+	<!-- <context:load-time-weaver/> -->
+	
+	<!-- <bean id="bpmDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		
+		<property name="maxActive" value="${jdbc.maxActive}" />
+		<property name="initialSize" value="1" />
+        <property name="maxWait" value="60000" />
+        <property name="minIdle" value="1" />
+
+		<property name="filters" value="stat" />
+		
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+        <property name="minEvictableIdleTimeMillis" value="300000" />
+        <property name="validationQuery" value="SELECT 'x' FROM DUAL" />
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+        <property name="poolPreparedStatements" value="true" />
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="20" />
+	</bean> -->
+
+	<bean id="bpmEMF"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="persistenceUnitName" value="org.drools.persistence.jpa.local" />
+		<property name="persistenceXmlLocation" value="classpath:config/META-INF/persistence.xml" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="databasePlatform" value="${hibernate.dialect}" />
+			</bean>
+		</property>
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.max_fetch_depth">${hibernate.max_fetch_depth}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <!--jpa事务不需要此配置-->
+				<!--<prop key="hibernate.transaction.manager_lookup_class">${hibernate.transaction.manager_lookup_class}</prop>-->
+			</props>
+		</property>
+	</bean>
+	
+	<!-- <bean id="bpmEM" class="org.springframework.orm.jpa.support.SharedEntityManagerBean">
+	  	<property name="entityManagerFactory" ref="bpmEMF"/>
+	</bean> -->
+
+	<!-- <bean id="bpmTxManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="bpmEMF" />
+    </bean> -->
+
+	<aop:config>
+		<aop:aspect ref="bpmTraceAspect">
+			<aop:around method="getTask"
+				pointcut="execution(${bpm.aspect.expression}) and @annotation(com.sinosoft.one.bpm.aspect.GetTask)" />
+			<aop:around method="startProcess"
+				pointcut="execution(${bpm.aspect.expression}) and @annotation(com.sinosoft.one.bpm.aspect.StartProcess )" />
+			<aop:around method="processTask"
+				pointcut="execution(${bpm.aspect.expression}) and @annotation(com.sinosoft.one.bpm.aspect.ProcessTask)" />
+		</aop:aspect>
+	</aop:config>
+
+	<bean id="bpmServiceSupport" scope="singleton"
+		class="com.sinosoft.one.bpm.support.BpmServiceSupport" init-method="init">
+		<property name="bpmEMF" ref="bpmEMF" />
+		<!-- <property name="bpmEM" ref="bpmEM" /> -->
+		<property name="bpmTxManager" ref="bpmTransactionManager" />
+		<!-- <property name="cache" ref="processInstanceBOCache" />
+		<property name="bpmProcessEventListener" ref="bpmProcessEventListener" /> -->
+		<property name="businessProcessEventListener" ref="businessProcessEventListener" />
+		<property name="businessTaskEventListener" ref="businessTaskEventListener" />
+		<property name="useJTA" value="${bpm.transaction.useJTA}" />
+		<!-- <property name="ksessionPoolSize" value="${bpm.session.poolSize}" /> -->
+	</bean>
+
+	<bean id="bpmService"
+		class="com.sinosoft.one.bpm.service.spring.BpmServiceImplement" >
+		<property name="bpmServiceSupport" ref="bpmServiceSupport" />
+	</bean>
+
+	<bean id="jpbmAPIUtil" class="com.sinosoft.one.bpm.util.JbpmAPIUtil">
+		<property name="bpmServiceSupport" ref="bpmServiceSupport" />
+	</bean>
+
+	<bean id="bpmTraceAspect" class="com.sinosoft.one.bpm.aspect.TaskAspect" />
+</beans>

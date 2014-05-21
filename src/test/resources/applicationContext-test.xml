@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+	http://www.springframework.org/schema/jee 
+	http://www.springframework.org/schema/jee/spring-jee-3.0.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+	default-lazy-init="true">
+
+	<context:annotation-config />
+	<!-- 定义受环境影响易变的变量 -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="locations">
+			<list>
+				<!-- 标准配置 -->
+				<value>classpath*:config/jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 使用annotation 自动注册bean,并检查@Required,@Autowired的属性已被注入 -->
+	<context:component-scan base-package="com.sinosoft.one" />
+
+	<!-- <bean id="dataSource" class="bitronix.tm.resource.jdbc.PoolingDataSource"
+		init-method="init" destroy-method="close">
+		<property name="className" value="oracle.jdbc.xa.client.OracleXADataSource" />
+		<property name="uniqueName" value="bpmOracleDS" />
+		<property name="maxPoolSize" value="100" />
+		<property name="allowLocalTransactions" value="true" />
+		<property name="testQuery" value="${jdbc.testQuery}"/>
+		<property name="driverProperties">
+			<props>
+				<prop key="user">${jdbc.username}</prop>
+				<prop key="password">${jdbc.password}</prop>
+				<prop key="URL">${jdbc.url}</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="btmConfig" factory-method="getConfiguration"
+		class="bitronix.tm.TransactionManagerServices">
+	</bean>
+
+	<bean id="bitronixTransactionManager" factory-method="getTransactionManager"
+		class="bitronix.tm.TransactionManagerServices" depends-on="btmConfig"
+		destroy-method="shutdown" /> 
+	
+	<bean id="bpmTransactionManager"
+		class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="transactionManager" ref="bitronixTransactionManager" />
+		<property name="userTransaction" ref="bitronixTransactionManager" />
+		<property name="nestedTransactionAllowed" value="false" />
+	</bean> -->	
+	
+
+	<!-- atomikos JTA 事务配置 -->
+	<!-- <bean id="dataSource" class="com.atomikos.jdbc.AtomikosDataSourceBean"
+		init-method="init" destroy-method="close">
+		<property name="uniqueResourceName">
+			<value>bpmOracleDS</value>
+		</property>
+		<property name="xaDataSourceClassName">
+			<value>oracle.jdbc.xa.client.OracleXADataSource</value>
+		</property>
+		<property name="xaProperties">
+			<props>
+				<prop key="user">${jdbc.username}</prop>
+				<prop key="password">${jdbc.password}</prop>
+				<prop key="URL">${jdbc.url}</prop>
+			</props>
+		</property>
+		<property name="poolSize">
+			<value>50</value>
+		</property>
+		<property name="testQuery">
+			<value>${jdbc.testQuery}</value>
+		</property>
+		<property name="borrowConnectionTimeout" value="3000" />
+	</bean>
+	
+	<bean id="atomikosTransactionManager" class="com.atomikos.icatch.jta.UserTransactionManager" init-method="init" destroy-method="close">
+		<property name="forceShutdown"><value>true</value></property>
+	</bean>
+
+	<bean id="atomikosUserTransaction" class="com.atomikos.icatch.jta.UserTransactionImp">
+	    <property name="transactionTimeout"><value>3000</value></property>
+	</bean>
+	
+	<bean id="bpmTransactionManager"
+		class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="transactionManager" ref="atomikosTransactionManager" />
+		<property name="userTransaction" ref="atomikosUserTransaction" />
+	</bean>	 -->
+	
+	<!-- <jee:jndi-lookup jndi-name="java/bpmDataSource" id="dataSource" /> -->
+	<!-- <bean id="bpmTransactionManager"
+		class="org.springframework.transaction.jta.WebLogicJtaTransactionManager" >  
+        <property name="transactionManagerName" value="javax.transaction.TransactionManager" />         
+    </bean>  --> 
+
+	<!-- <bean id="dataSourceProxy" class="com.sinosoft.one.log4jdbc.Log4jdbcProxyDataSource">
+		<constructor-arg ref="dataSource" />
+	</bean> -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+
+		<property name="filters" value="stat" />
+
+		<property name="maxActive" value="1000" />
+		<property name="initialSize" value="1" />
+		<property name="maxWait" value="60000" />
+		<property name="minIdle" value="1" />
+
+		<property name="timeBetweenEvictionRunsMillis" value="3000" />
+		<property name="minEvictableIdleTimeMillis" value="300000" />
+
+		<property name="validationQuery" value="SELECT 1 FROM dual" />
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+
+		<property name="poolPreparedStatements" value="true" />
+		<property name="maxPoolPreparedStatementPerConnectionSize"
+			value="20" />
+	</bean>
+	
+	<bean id="bpmTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="bpmEMF" />
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="com.sinosoft.one" />
+        <property name="hibernateProperties">
+        	<props>
+        		<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.max_fetch_depth">${hibernate.max_fetch_depth}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.transaction.manager_lookup_class">${hibernate.transaction.manager_lookup_class}</prop>
+        	</props>
+        </property>
+    </bean>
+
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <bean id="studentStore" class="com.sinosoft.one.bpm.test.data.StudentStoreImpl">
+        <property name="hibernateTemplate" ref="hibernateTemplate" />
+    </bean>
+    <bean id="dataStore" class="com.sinosoft.one.bpm.test.data.DataStoreImpl">
+        <property name="hibernateTemplate" ref="hibernateTemplate" />
+    </bean>
+    
+    <bean id="hibernateTransactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<tx:advice id="txAdvice" transaction-manager="hibernateTransactionManager">
+		<tx:attributes>
+			<tx:method name="find*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="get*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="select*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="*" propagation="REQUIRED" read-only="false" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<aop:config>
+		<aop:pointcut id="servicePointcut"
+			expression="execution(public * com.sinosoft.one.bpm.test.service.spring.*.*(..))" />
+			<!--  and !@annotation(com.sinosoft.one.bpm.aspect.StartProcess) and !@annotation(com.sinosoft.one.bpm.aspect.ProcessTask) and !@annotation(com.sinosoft.one.bpm.aspect.GetTask) -->
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="servicePointcut" order="1" />
+	</aop:config>
+	
+	<bean id="businessProcessEventListener" class="com.sinosoft.one.bpm.listener.BusinessProcessEventListener" />
+	
+	<bean id="businessTaskEventListener" class="com.sinosoft.one.bpm.listener.BusinessTaskEventListener">
+		<property name="taskEventListeners">
+			<list>
+				<ref local="businessTaskEventListenerTest"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="businessTaskEventListenerTest" class="com.sinosoft.one.bpm.test.listener.BusinessTaskEventListenerTest" />
+</beans>
